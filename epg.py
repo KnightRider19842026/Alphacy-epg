@@ -68,7 +68,7 @@ def merge_programmes(new_programmes, target_date):
     existing = load_existing()
     target_day = target_date.strftime("%Y%m%d")
 
-    # 🔥 overwrite ίδιας μέρας
+    # overwrite μόνο ίδιας μέρας
     existing = [x for x in existing if not x[0].startswith(target_day)]
     base_date = target_date.replace(hour=0, minute=0, second=0, microsecond=0)
     new_entries = []
@@ -80,6 +80,7 @@ def merge_programmes(new_programmes, target_date):
         if i < len(new_programmes) - 1:
             nh, nm = map(int, new_programmes[i + 1][0].split(":"))
             stop_dt = base_date + timedelta(hours=nh, minutes=nm)
+            # fix midnight
             if stop_dt <= start_dt:
                 stop_dt += timedelta(days=1)
         else:
@@ -89,7 +90,7 @@ def merge_programmes(new_programmes, target_date):
         stop = stop_dt.strftime("%Y%m%d%H%M%S +0300")
         new_entries.append((start, stop, title))
 
-    # 🔥 keep last 3 days
+    # keep last 3 days based on programme dates
     valid_days = set(x[0][:8] for x in existing)
     valid_days.add(target_day)
     valid_days = sorted(valid_days)[-3:]
