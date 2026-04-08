@@ -3,35 +3,105 @@
 <channel id="alpha.cy">
   <display-name>Alpha Cyprus</display-name>
 </channel>
+<programme channel="alpha.cy" start="20260408060000 +0300" stop="20260408064500 +0300">
+  <title>DEAL</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: DEAL</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408064500 +0300" stop="20260408092000 +0300">
+  <title>ALPHA ΚΑΛΗΜΕΡΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA ΚΑΛΗΜΕΡΑ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408092000 +0300" stop="20260408110000 +0300">
+  <title>BUONGIORNO</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: BUONGIORNO</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408110000 +0300" stop="20260408135000 +0300">
+  <title>ALPHA ΕΝΗΜΕΡΩΣΗ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA ΕΝΗΜΕΡΩΣΗ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408135000 +0300" stop="20260408151500 +0300">
+  <title>ΤΟ ΣΟΪ ΣΟΥ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΤΟ ΣΟΪ ΣΟΥ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408151500 +0300" stop="20260408170000 +0300">
+  <title>ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408170000 +0300" stop="20260408175500 +0300">
+  <title>THE CHASE GREECE</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: THE CHASE GREECE</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408175500 +0300" stop="20260408180000 +0300">
+  <title>ALPHA NEWS</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA NEWS</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408180000 +0300" stop="20260408190000 +0300">
+  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408190000 +0300" stop="20260408200000 +0300">
+  <title>DEAL</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: DEAL</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408200000 +0300" stop="20260408210000 +0300">
+  <title>ALPHA NEWS</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA NEWS</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408210000 +0300" stop="20260408233000 +0300">
+  <title>ΑΓΙΟΣ ΠΑΪΣΙΟΣ - ΑΠΟ ΤΑ ΦΑΡΑΣΑ ΣΤΟΝ ΟΥΡΑΝΟ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΑΓΙΟΣ ΠΑΪΣΙΟΣ - ΑΠΟ ΤΑ ΦΑΡΑΣΑ ΣΤΟΝ ΟΥΡΑΝΟ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260408233000 +0300" stop="20260409010000 +0300">
+  <title>ΑΥΤΟΨΙΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΑΥΤΟΨΙΑ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260409010000 +0300" stop="20260409020000 +0300">
+  <title>ΔΥΟ ΞΕΝΟΙ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΔΥΟ ΞΕΝΟΙ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260409020000 +0300" stop="20260409044500 +0300">
+  <title>ΠΡΩΤΑΓΩΝΙΣΤΕΣ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΠΡΩΤΑΓΩΝΙΣΤΕΣ</desc>
+</programme>
+<programme channel="alpha.cy" start="20260409044500 +0300" stop="20260409054500 +0300">
+  <title>ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</desc>
+</programme>
 <programme channel="alpha.cy" start="20260409060000 +0300" stop="20260409064500 +0300">
-  <title>ΨΥΧΑΓΩΓΙΑ</title>
+  <title>DEAL</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: DEAL</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409064500 +0300" stop="20260409092000 +0300">
   <title>ALPHA ΚΑΛΗΜΕΡΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA ΚΑΛΗΜΕΡΑ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409092000 +0300" stop="20260409110000 +0300">
   <title>BUONGIORNO</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: BUONGIORNO</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409110000 +0300" stop="20260409135000 +0300">
   <title>ALPHA ΕΝΗΜΕΡΩΣΗ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA ΕΝΗΜΕΡΩΣΗ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409135000 +0300" stop="20260409151500 +0300">
   <title>ΤΟ ΣΟΪ ΣΟΥ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΤΟ ΣΟΪ ΣΟΥ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409151500 +0300" stop="20260409170000 +0300">
   <title>ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409170000 +0300" stop="20260409175500 +0300">
   <title>THE CHASE GREECE</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: THE CHASE GREECE</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409175500 +0300" stop="20260409180000 +0300">
   <title>ALPHA NEWS</title>
-</programme>
-<programme channel="alpha.cy" start="20260409180000 +0300" stop="20260409180000 +0300">
-  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA NEWS</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409180000 +0300" stop="20260409190000 +0300">
-  <title>ΕΛΛΗΝΙΚΕΣ ΣΕΙΡΕΣ</title>
+  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409190000 +0300" stop="20260409200000 +0300">
   <title>DEAL</title>
@@ -39,71 +109,26 @@
 </programme>
 <programme channel="alpha.cy" start="20260409200000 +0300" stop="20260409210000 +0300">
   <title>ALPHA NEWS</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ALPHA NEWS</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409210000 +0300" stop="20260409233000 +0300">
   <title>ΑΓΙΟΣ ΠΑΪΣΙΟΣ - ΑΠΟ ΤΑ ΦΑΡΑΣΑ ΣΤΟΝ ΟΥΡΑΝΟ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΑΓΙΟΣ ΠΑΪΣΙΟΣ - ΑΠΟ ΤΑ ΦΑΡΑΣΑ ΣΤΟΝ ΟΥΡΑΝΟ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260409233000 +0300" stop="20260410010000 +0300">
   <title>ΑΥΤΟΨΙΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΑΥΤΟΨΙΑ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260410010000 +0300" stop="20260410020000 +0300">
   <title>ΔΥΟ ΞΕΝΟΙ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΔΥΟ ΞΕΝΟΙ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260410020000 +0300" stop="20260410044500 +0300">
   <title>ΠΡΩΤΑΓΩΝΙΣΤΕΣ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΠΡΩΤΑΓΩΝΙΣΤΕΣ</desc>
 </programme>
 <programme channel="alpha.cy" start="20260410044500 +0300" stop="20260410054500 +0300">
   <title>ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410060000 +0300" stop="20260410064500 +0300">
-  <title>ΨΥΧΑΓΩΓΙΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410064500 +0300" stop="20260410092000 +0300">
-  <title>ALPHA ΚΑΛΗΜΕΡΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410092000 +0300" stop="20260410110000 +0300">
-  <title>BUONGIORNO</title>
-</programme>
-<programme channel="alpha.cy" start="20260410110000 +0300" stop="20260410135000 +0300">
-  <title>ALPHA ΕΝΗΜΕΡΩΣΗ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410135000 +0300" stop="20260410151500 +0300">
-  <title>ΤΟ ΣΟΪ ΣΟΥ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410151500 +0300" stop="20260410170000 +0300">
-  <title>ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410170000 +0300" stop="20260410175500 +0300">
-  <title>THE CHASE GREECE</title>
-</programme>
-<programme channel="alpha.cy" start="20260410175500 +0300" stop="20260410180000 +0300">
-  <title>ALPHA NEWS</title>
-</programme>
-<programme channel="alpha.cy" start="20260410180000 +0300" stop="20260410180000 +0300">
-  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410180000 +0300" stop="20260410190000 +0300">
-  <title>ΕΛΛΗΝΙΚΕΣ ΣΕΙΡΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410190000 +0300" stop="20260410200000 +0300">
-  <title>Με τον Γιώργο Θαναηλάκη</title>
-</programme>
-<programme channel="alpha.cy" start="20260410200000 +0300" stop="20260410210000 +0300">
-  <title>ALPHA NEWS</title>
-</programme>
-<programme channel="alpha.cy" start="20260410210000 +0300" stop="20260410233000 +0300">
-  <title>ΑΓΙΟΣ ΠΑΪΣΙΟΣ - ΑΠΟ ΤΑ ΦΑΡΑΣΑ ΣΤΟΝ ΟΥΡΑΝΟ</title>
-</programme>
-<programme channel="alpha.cy" start="20260410233000 +0300" stop="20260411010000 +0300">
-  <title>ΑΥΤΟΨΙΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260411010000 +0300" stop="20260411020000 +0300">
-  <title>ΔΥΟ ΞΕΝΟΙ</title>
-</programme>
-<programme channel="alpha.cy" start="20260411020000 +0300" stop="20260411044500 +0300">
-  <title>ΠΡΩΤΑΓΩΝΙΣΤΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260411044500 +0300" stop="20260411054500 +0300">
-  <title>ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</title>
+  <desc>Πρόγραμμα του Alpha Cyprus: ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</desc>
 </programme>
 </tv>
