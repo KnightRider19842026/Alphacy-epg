@@ -90,7 +90,7 @@ def merge_programmes(new_programmes, target_date):
     if stop_dt <= start_dt:
         stop_dt += timedelta(days=1)
         else:
-            stop_dt = start_dt + timedelta(minutes=60)
+    stop_dt = start_dt + timedelta(minutes=120)  # πιο safe
 
         start = start_dt.strftime("%Y%m%d%H%M%S +0300")
         stop = stop_dt.strftime("%Y%m%d%H%M%S +0300")
