@@ -2,13 +2,16 @@ name: Update Alpha EPG
 
 on:
   schedule:
-    # Τρέχει κάθε μέρα στις 00:02 ώρα Κύπρου (UTC+3)
-    - cron: '2 21 * * *'      # 21:02 UTC = 00:02 Κύπρου
-  workflow_dispatch:
+    # 21:02 UTC είναι 00:02 ώρα Κύπρου (για θερινή ώρα UTC+3)
+    - cron: '2 21 * * *'
+  workflow_dispatch: # Σου επιτρέπει να το τρέχεις χειροκίνητα για δοκιμή
 
 jobs:
   update-epg:
     runs-on: ubuntu-latest
+    # Προσθέτουμε permissions για να μπορεί το bot να κάνει push
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -34,8 +37,9 @@ jobs:
           
           git add epg.xml
           
+          # Έλεγχος αν υπάρχουν αλλαγές πριν το commit
           if ! git diff --staged --quiet; then
-            git commit -m "Update Alpha EPG - 2 days"
+            git commit -m "Update Alpha EPG (Current + Next Day)"
             git push
           else
             echo "No changes in epg.xml"
