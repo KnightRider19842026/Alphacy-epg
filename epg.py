@@ -29,26 +29,26 @@ def fetch_programmes():
         match = time_pattern.search(line)
         if match:
             t = match.group(1)
-            # Πιο αυστηρός έλεγχος για να πιάνει μόνο γραμμές ώρας
-            if len(line) < 15 and any(c.isdigit() for c in line):
+            # Πολύ αυστηρός έλεγχος για γραμμές ώρας
+            if len(line) < 20 and any(c.isdigit() for c in t):
                 current_time = t
                 continue
 
         if current_time and len(line) > 4:
             title = clean_title(line)
-            if title and len(title) > 3 and "Designed" not in title and "developed" not in title:
+            if title and len(title) > 3 and "Designed" not in title:
                 programmes.append((current_time, title))
-                current_time = None   # reset
+                current_time = None
 
-    # Αφαιρούμε διπλότυπες ώρες (πολύ σημαντικό για το 06:00)
-    seen = {}
+    # Αφαιρούμε διπλότυπες ώρες (σημαντικό για το 06:00)
     clean_prog = []
+    seen_times = set()
     for t, title in programmes:
-        if t not in seen:
-            seen[t] = title
+        if t not in seen_times:
+            seen_times.add(t)
             clean_prog.append((t, title))
-        elif title != seen[t]:
-            clean_prog.append((t, title))   # κρατάμε και το δεύτερο αν είναι διαφορετικό
+        elif title != clean_prog[-1][1]:   # αν είναι διαφορετικός τίτλος, κρατάμε και αυτόν
+            clean_prog.append((t, title))
 
     return clean_prog
 
@@ -63,20 +63,22 @@ def build_xml(programmes, today_date, tomorrow_date):
                 h, m = map(int, time_str.split(":"))
                 start_dt = base_date.replace(hour=h, minute=m, second=0, microsecond=0)
 
-                # Υπολογισμός stop
                 if i < len(programmes) - 1:
                     nh, nm = map(int, programmes[i + 1][0].split(":"))
                     stop_dt = base_date.replace(hour=nh, minute=nm, second=0, microsecond=0)
-                    if nh < h or (nh == h and nm <= m):   # overnight
+
+                    # Overnight (23:xx → 01:xx)
+                    if nh < h or (nh == h and nm < m):
                         stop_dt += timedelta(days=1)
                 else:
                     stop_dt = start_dt + timedelta(hours=1)
 
-                if h < 6:   # νυχτερινά προγράμματα
+                # Προγράμματα μετά τα μεσάνυχτα
+                if h < 6:
                     start_dt += timedelta(days=1)
                     stop_dt += timedelta(days=1)
 
-                # Διόρθωση μηδενικής διάρκειας
+                # Διόρθωση λάθους διάρκειας (π.χ. 06:00-06:00)
                 if (stop_dt - start_dt).total_seconds() < 300:   # λιγότερο από 5 λεπτά
                     stop_dt = start_dt + timedelta(minutes=60)
 
@@ -89,8 +91,10 @@ def build_xml(programmes, today_date, tomorrow_date):
             except:
                 continue
 
-    # Καθαρίζουμε μόνο τις δύο τελευταίες ημέρες
+    # Μόνο οι 2 τελευταίες ημέρες (πολύ επιθετικό καθάρισμα)
+    print(f"→ Προσθήκη {today_date.strftime('%A %d/%m')}")
     add_day(today_date)
+    print(f"→ Προσθήκη {tomorrow_date.strftime('%A %d/%m')}")
     add_day(tomorrow_date)
 
     xml += "</tv>"
@@ -98,9 +102,9 @@ def build_xml(programmes, today_date, tomorrow_date):
     with open("epg.xml", "w", encoding="utf-8") as f:
         f.write(xml)
 
-    print(f"✅ epg.xml δημιουργήθηκε με 2 ημέρες:")
-    print(f"   Σήμερα: {today_date.strftime('%A %d/%m/%Y')}")
-    print(f"   Αύριο : {tomorrow_date.strftime('%A %d/%m/%Y')}")
+    print(f"\n✅ epg.xml ενημερώθηκε επιτυχώς!")
+    print(f"   Σήμερα : {today_date.strftime('%A %d/%m/%Y')}")
+    print(f"   Αύριο  : {tomorrow_date.strftime('%A %d/%m/%Y')}")
 
 def main():
     now = datetime.now()
@@ -108,7 +112,7 @@ def main():
     tomorrow_date = today_date + timedelta(days=1)
 
     programmes = fetch_programmes()
-    print(f"Βρέθηκαν {len(programmes)} προγράμματα από την ιστοσελίδα")
+    print(f"Βρέθηκαν {len(programmes)} προγράμματα από την Alpha")
 
     if programmes:
         build_xml(programmes, today_date, tomorrow_date)
