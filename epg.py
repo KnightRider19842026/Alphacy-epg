@@ -16,7 +16,9 @@ def clean_title(title):
     title = re.sub(r"copyright.*", "", title, flags=re.IGNORECASE)
     title = re.sub(
         r"(ΚΑΘΗΜΕΡΙΝΑ|ΣΑΒΒΑΤΟΚΥΡΙΑΚΟ|ΔΕΥΤΕΡΑ|ΤΡΙΤΗ|ΤΕΤΑΡΤΗ|ΠΕΜΠΤΗ|ΠΑΡΑΣΚΕΥΗ|ΣΑΒΒΑΤΟ|ΚΥΡΙΑΚΗ).*?\d{1,2}:\d{2}",
-        "", title, flags=re.IGNORECASE
+        "",
+        title,
+        flags=re.IGNORECASE
     )
     return re.sub(r"\s+", " ", title).strip()
 
@@ -71,7 +73,7 @@ def merge_programmes(new_programmes, target_date):
 
     target_day = target_date.strftime("%Y%m%d")
 
-    # 🔥 IMPORTANT FIX → overwrite ίδιας μέρας
+    # 🔥 overwrite ίδιας μέρας
     existing = [x for x in existing if not x[0].startswith(target_day)]
 
     base_date = target_date.replace(hour=0, minute=0, second=0, microsecond=0)
@@ -83,14 +85,15 @@ def merge_programmes(new_programmes, target_date):
         start_dt = base_date + timedelta(hours=h, minutes=m)
 
         if i < len(new_programmes) - 1:
-    nh, nm = map(int, new_programmes[i + 1][0].split(":"))
-    stop_dt = base_date + timedelta(hours=nh, minutes=nm)
+            nh, nm = map(int, new_programmes[i + 1][0].split(":"))
+            stop_dt = base_date + timedelta(hours=nh, minutes=nm)
 
-    # 🔥 FIX: αν πάει πίσω → είναι επόμενη μέρα
-    if stop_dt <= start_dt:
-        stop_dt += timedelta(days=1)
+            # 🔥 FIX midnight (αν πάει πίσω → επόμενη μέρα)
+            if stop_dt <= start_dt:
+                stop_dt += timedelta(days=1)
+
         else:
-    stop_dt = start_dt + timedelta(minutes=120)  # πιο safe
+            stop_dt = start_dt + timedelta(minutes=120)
 
         start = start_dt.strftime("%Y%m%d%H%M%S +0300")
         stop = stop_dt.strftime("%Y%m%d%H%M%S +0300")
