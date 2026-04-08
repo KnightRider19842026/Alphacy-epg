@@ -8,6 +8,20 @@ import os
 URL = "https://www.alphacyprus.com.cy/program"
 XML_FILE = "epg.xml"
 
+# ---------------- FIXED DURATIONS (λεπτά) ----------------
+FIX_DURATIONS = {
+    "ALPHA ΚΑΛΗΜΕΡΑ": 90,
+    "ALPHA ΕΝΗΜΕΡΩΣΗ": 150,
+    "DEAL": 60,
+    "ALPHA NEWS": 60,
+    "ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ": 60,
+    "ΤΟ ΣΟΪ ΣΟΥ": 65,
+    "ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ": 60,
+    "THE CHASE GREECE": 55,
+    "ΑΓΙΟΣ ΠΑΪΣΙΟΣ - ΑΠΟ ΤΑ ΦΑΡΑΣΑ ΣΤΟΝ ΟΥΡΑΝΟ": 150,
+    "ΑΥΤΟΨΙΑ": 90,
+}
+
 # ---------------- CLEAN TITLE ----------------
 def clean_title(title):
     title = re.sub(r"\(.*?\)", "", title)
@@ -78,13 +92,18 @@ def merge_programmes(days_programmes):
             h, m = map(int, time_str.split(":"))
             start_dt = base_date + timedelta(hours=h, minutes=m)
 
-            if i < len(programmes) - 1:
-                nh, nm = map(int, programmes[i + 1][0].split(":"))
-                stop_dt = base_date + timedelta(hours=nh, minutes=nm)
-                if stop_dt <= start_dt:
-                    stop_dt += timedelta(days=1)
+            # fixed duration if exists
+            if title in FIX_DURATIONS:
+                stop_dt = start_dt + timedelta(minutes=FIX_DURATIONS[title])
             else:
-                stop_dt = start_dt + timedelta(minutes=120)
+                # default: μέχρι το επόμενο πρόγραμμα ή +120 λεπτά
+                if i < len(programmes) - 1:
+                    nh, nm = map(int, programmes[i + 1][0].split(":"))
+                    stop_dt = base_date + timedelta(hours=nh, minutes=nm)
+                    if stop_dt <= start_dt:
+                        stop_dt += timedelta(days=1)
+                else:
+                    stop_dt = start_dt + timedelta(minutes=120)
 
             start = start_dt.strftime("%Y%m%d%H%M%S +0300")
             stop = stop_dt.strftime("%Y%m%d%H%M%S +0300")
@@ -122,15 +141,15 @@ def save_xml(programmes):
 # ---------------- MAIN ----------------
 def main():
     try:
-        # Φτιάχνουμε λίστα με 2 μέρες μπροστά
+        # Φτιάχνουμε λίστα με 3 μέρες (σήμερα, αύριο, μεθεπόμενη)
         days_programmes = []
-        for offset in range(2):  # 0 = σήμερα, 1 = αύριο
+        for offset in range(3):
             prog, date = fetch_day_programmes(offset)
             days_programmes.append((prog, date))
 
         merged = merge_programmes(days_programmes)
         save_xml(merged)
-        print(f"✅ OK - {len(merged)} programmes (2 μέρες μπροστά)")
+        print(f"✅ OK - {len(merged)} programmes (3ήμερο με fixed durations)")
     except Exception as e:
         print("❌ ERROR:", e)
 
