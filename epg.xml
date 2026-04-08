@@ -4,7 +4,7 @@
   <display-name>Alpha Cyprus</display-name>
 </channel>
 <programme channel="alpha.cy" start="20260408060000 +0300" stop="20260408064500 +0300">
-  <title>DEAL</title>
+  <title>ΨΥΧΑΓΩΓΙΑ</title>
 </programme>
 <programme channel="alpha.cy" start="20260408064500 +0300" stop="20260408092000 +0300">
   <title>ALPHA ΚΑΛΗΜΕΡΑ</title>
@@ -30,11 +30,8 @@
 <programme channel="alpha.cy" start="20260408180000 +0300" stop="20260408190000 +0300">
   <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
 </programme>
-<programme channel="alpha.cy" start="20260408180000 +0300" stop="20260408190000 +0300">
-  <title>ΕΛΛΗΝΙΚΕΣ ΣΕΙΡΕΣ</title>
-</programme>
 <programme channel="alpha.cy" start="20260408190000 +0300" stop="20260408200000 +0300">
-  <title>DEAL</title>
+  <title>Με τον Γιώργο Θαναηλάκη</title>
 </programme>
 <programme channel="alpha.cy" start="20260408200000 +0300" stop="20260408210000 +0300">
   <title>ALPHA NEWS</title>
@@ -55,7 +52,7 @@
   <title>ΜΕ ΑΓΑΠΗ ΧΡΙΣΤΙΑΝΑ</title>
 </programme>
 <programme channel="alpha.cy" start="20260409060000 +0300" stop="20260409064500 +0300">
-  <title>DEAL</title>
+  <title>ΨΥΧΑΓΩΓΙΑ</title>
 </programme>
 <programme channel="alpha.cy" start="20260409064500 +0300" stop="20260409092000 +0300">
   <title>ALPHA ΚΑΛΗΜΕΡΑ</title>
@@ -81,11 +78,8 @@
 <programme channel="alpha.cy" start="20260409180000 +0300" stop="20260409190000 +0300">
   <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
 </programme>
-<programme channel="alpha.cy" start="20260409180000 +0300" stop="20260409190000 +0300">
-  <title>ΕΛΛΗΝΙΚΕΣ ΣΕΙΡΕΣ</title>
-</programme>
 <programme channel="alpha.cy" start="20260409190000 +0300" stop="20260409200000 +0300">
-  <title>DEAL</title>
+  <title>Με τον Γιώργο Θαναηλάκη</title>
 </programme>
 <programme channel="alpha.cy" start="20260409200000 +0300" stop="20260409210000 +0300">
   <title>ALPHA NEWS</title>
