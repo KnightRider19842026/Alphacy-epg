@@ -1,29 +1,40 @@
 name: Update Alpha Cyprus EPG
 
 on:
+  workflow_dispatch:   # επιτρέπει manual run από GitHub UI
   schedule:
-    - cron: "0 3 * * *"  # UTC 06:00 Κύπρου
-    - cron: "0 15 * * *" # UTC 18:00 Κύπρου
+    - cron: "0 3 * * *"   # UTC 06:00 Κύπρου
+    - cron: "0 15 * * *"  # UTC 18:00 Κύπρου
 
 jobs:
-  build:
+  update-epg:
     runs-on: ubuntu-latest
     steps:
+      # Βασικό checkout
       - uses: actions/checkout@v3
+
+      # Setup Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
+
+      # Εγκατάσταση dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 lxml
+
+      # Τρέξιμο epg.py
       - name: Run EPG script
         run: python epg.py
+
+      # Commit & Push με pull για αποφυγή conflicts
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add epg.xml
           git commit -m "Auto-update epg.xml" || echo "No changes"
-          git push
+          git pull --rebase origin main
+          git push origin main
