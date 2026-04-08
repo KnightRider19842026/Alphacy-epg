@@ -28,9 +28,11 @@ def fetch_programmes():
     current_time = None
     for line in lines:
         match = time_pattern.search(line)
-        if match and len(line.replace(match.group(1), "").strip()) < 5:   # πιθανή γραμμή ώρας
-            current_time = match.group(1)
-            continue
+        if match:
+            possible_time = match.group(1)
+            if len(line.replace(possible_time, "").strip()) < 10:
+                current_time = possible_time
+                continue
 
         if current_time and len(line) > 3:
             title = clean_title(line)
@@ -55,19 +57,18 @@ def build_xml(programmes, today_date, tomorrow_date):
                 h, m = map(int, time_str.split(":"))
                 start_dt = base_date.replace(hour=h, minute=m, second=0, microsecond=0)
 
-                # Υπολογισμός stop time
                 if i < len(programmes) - 1:
                     nh, nm = map(int, programmes[i + 1][0].split(":"))
                     stop_dt = base_date.replace(hour=nh, minute=nm, second=0, microsecond=0)
 
-                    # IMPORTANT: Αν η επόμενη ώρα είναι μικρότερη → είναι overnight (π.χ. 23:30 → 01:00)
+                    # Κρίσιμη διόρθωση για overnight: 23:30 → 01:00
                     if nh < h or (nh == h and nm < m):
                         stop_dt += timedelta(days=1)
                 else:
-                    # Τελευταίο πρόγραμμα της λίστας → default +1 ώρα
+                    # Τελευταίο πρόγραμμα της λίστας
                     stop_dt = start_dt + timedelta(hours=1)
 
-                # Αν η ώρα έναρξης είναι πολύ μικρή (π.χ. 00:xx ή 01:xx) → πιθανότατα επόμενη μέρα
+                # Αν η ώρα έναρξης είναι μετά τα μεσάνυχτα (00:xx - 05:xx)
                 if h < 6:
                     start_dt += timedelta(days=1)
                     stop_dt += timedelta(days=1)
@@ -81,7 +82,6 @@ def build_xml(programmes, today_date, tomorrow_date):
             except Exception:
                 continue
 
-    # Προσθήκη προγραμμάτων για σήμερα + αύριο
     add_day(programmes, today_date)
     add_day(programmes, tomorrow_date)
 
@@ -91,7 +91,6 @@ def build_xml(programmes, today_date, tomorrow_date):
         f.write(xml)
 
     print(f"✅ epg.xml ενημερώθηκε με {len(programmes)} προγράμματα")
-    print(f"   Σήμερα: {today_date.strftime('%d/%m')} | Αύριο: {tomorrow_date.strftime('%d/%m')}")
 
 def main():
     now = datetime.now()
