@@ -22,8 +22,8 @@ def clean_title(title):
     )
     return re.sub(r"\s+", " ", title).strip()
 
-# ---------------- FETCH NEXT DAY ----------------
-def fetch_next_day_programmes():
+# ---------------- FETCH DAY ----------------
+def fetch_day_programmes(day_offset):
     resp = requests.get(URL, timeout=10)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
@@ -45,8 +45,8 @@ def fetch_next_day_programmes():
                 programmes.append((current_time, title))
             current_time = None
 
-    tomorrow = datetime.now() + timedelta(days=1)
-    return programmes, tomorrow
+    target_date = datetime.now() + timedelta(days=day_offset)
+    return programmes, target_date
 
 # ---------------- LOAD EXISTING ----------------
 def load_existing():
@@ -64,45 +64,43 @@ def load_existing():
     return data
 
 # ---------------- MERGE ----------------
-def merge_programmes(new_programmes, target_date):
+def merge_programmes(days_programmes):
     existing = load_existing()
-    target_day = target_date.strftime("%Y%m%d")
-
-    # overwrite μόνο ίδιας μέρας
-    existing = [x for x in existing if not x[0].startswith(target_day)]
-    base_date = target_date.replace(hour=0, minute=0, second=0, microsecond=0)
     new_entries = []
 
-    for i, (time_str, title) in enumerate(new_programmes):
-        h, m = map(int, time_str.split(":"))
-        start_dt = base_date + timedelta(hours=h, minutes=m)
+    for programmes, target_date in days_programmes:
+        target_day = target_date.strftime("%Y%m%d")
+        # Remove old programmes of the same day
+        existing = [x for x in existing if not x[0].startswith(target_day)]
+        base_date = target_date.replace(hour=0, minute=0, second=0, microsecond=0)
 
-        if i < len(new_programmes) - 1:
-            nh, nm = map(int, new_programmes[i + 1][0].split(":"))
-            stop_dt = base_date + timedelta(hours=nh, minutes=nm)
-            # fix midnight
-            if stop_dt <= start_dt:
-                stop_dt += timedelta(days=1)
-        else:
-            stop_dt = start_dt + timedelta(minutes=120)
+        for i, (time_str, title) in enumerate(programmes):
+            h, m = map(int, time_str.split(":"))
+            start_dt = base_date + timedelta(hours=h, minutes=m)
 
-        start = start_dt.strftime("%Y%m%d%H%M%S +0300")
-        stop = stop_dt.strftime("%Y%m%d%H%M%S +0300")
-        new_entries.append((start, stop, title))
+            if i < len(programmes) - 1:
+                nh, nm = map(int, programmes[i + 1][0].split(":"))
+                stop_dt = base_date + timedelta(hours=nh, minutes=nm)
+                if stop_dt <= start_dt:
+                    stop_dt += timedelta(days=1)
+            else:
+                stop_dt = start_dt + timedelta(minutes=120)
 
-    # keep last 3 days based on programme dates
-    valid_days = set(x[0][:8] for x in existing)
-    valid_days.add(target_day)
-    valid_days = sorted(valid_days)[-3:]
+            start = start_dt.strftime("%Y%m%d%H%M%S +0300")
+            stop = stop_dt.strftime("%Y%m%d%H%M%S +0300")
+            new_entries.append((start, stop, title))
 
-    filtered = [x for x in existing if x[0][:8] in valid_days]
-    all_data = filtered + new_entries
+    # Combine old + new
+    all_data = existing + new_entries
 
-    # remove duplicates
+    # Keep last 3 days only
+    valid_days = sorted({x[0][:8] for x in all_data})[-3:]
+    filtered = [x for x in all_data if x[0][:8] in valid_days]
+
+    # Remove duplicates & sort
     unique = {}
-    for item in all_data:
+    for item in filtered:
         unique[item[0]] = item
-
     final = sorted(unique.values(), key=lambda x: x[0])
     return final
 
@@ -124,13 +122,15 @@ def save_xml(programmes):
 # ---------------- MAIN ----------------
 def main():
     try:
-        new_programmes, target_date = fetch_next_day_programmes()
-        if not new_programmes:
-            print("❌ Δεν βρέθηκαν προγράμματα")
-            return
-        merged = merge_programmes(new_programmes, target_date)
+        # Φτιάχνουμε λίστα με 2 μέρες μπροστά
+        days_programmes = []
+        for offset in range(2):  # 0 = σήμερα, 1 = αύριο
+            prog, date = fetch_day_programmes(offset)
+            days_programmes.append((prog, date))
+
+        merged = merge_programmes(days_programmes)
         save_xml(merged)
-        print(f"✅ OK - {len(merged)} programmes (3ήμερο)")
+        print(f"✅ OK - {len(merged)} programmes (2 μέρες μπροστά)")
     except Exception as e:
         print("❌ ERROR:", e)
 
