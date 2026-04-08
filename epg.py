@@ -36,21 +36,17 @@ def fetch_programmes():
 
         if current_time and len(line) > 3:
             title = clean_title(line)
-            if title and len(title) > 2 and "Designed and developed" not in title:
+            if title and len(title) > 2 and "Designed" not in title:
                 programmes.append((current_time, title))
                 current_time = None
 
     return programmes
 
 def build_xml(programmes, today_date, tomorrow_date):
-    if not programmes:
-        print("❌ Δεν βρέθηκαν προγράμματα.")
-        return
-
     xml = '<?xml version="1.0" encoding="utf-8"?>\n<tv>\n'
     xml += '<channel id="alpha.cy">\n  <display-name>Alpha Cyprus</display-name>\n</channel>\n'
 
-    def add_day(programmes, base_date):
+    def add_day(base_date):
         nonlocal xml
         for i, (time_str, title) in enumerate(programmes):
             try:
@@ -60,17 +56,18 @@ def build_xml(programmes, today_date, tomorrow_date):
                 if i < len(programmes) - 1:
                     nh, nm = map(int, programmes[i + 1][0].split(":"))
                     stop_dt = base_date.replace(hour=nh, minute=nm, second=0, microsecond=0)
-
-                    # Overnight correction (23:30 → 01:00, 02:00 → 04:45 κλπ.)
                     if nh < h or (nh == h and nm < m):
                         stop_dt += timedelta(days=1)
                 else:
                     stop_dt = start_dt + timedelta(hours=1)
 
-                # Προγράμματα μετά τα μεσάνυχτα (00:00 - 05:59) ανήκουν στην επόμενη μέρα
-                if h < 6:
+                if h < 6:   # overnight
                     start_dt += timedelta(days=1)
                     stop_dt += timedelta(days=1)
+
+                # Διόρθωση ίδιας ώρας (18:00-18:00)
+                if (stop_dt - start_dt).total_seconds() < 60:
+                    stop_dt = start_dt + timedelta(minutes=60)
 
                 start_str = start_dt.strftime("%Y%m%d%H%M%S +0300")
                 stop_str  = stop_dt.strftime("%Y%m%d%H%M%S +0300")
@@ -78,32 +75,27 @@ def build_xml(programmes, today_date, tomorrow_date):
                 xml += f'<programme channel="alpha.cy" start="{start_str}" stop="{stop_str}">\n'
                 xml += f"  <title>{title}</title>\n</programme>\n"
 
-            except Exception:
+            except:
                 continue
 
-    # Μόνο σήμερα + αύριο (Πέμπτη + Παρασκευή όταν τρέχει στις 00:02 Παρασκευής)
-    add_day(programmes, today_date)
-    add_day(programmes, tomorrow_date)
+    add_day(today_date)
+    add_day(tomorrow_date)
 
     xml += "</tv>"
 
     with open("epg.xml", "w", encoding="utf-8") as f:
         f.write(xml)
 
-    print(f"✅ epg.xml ενημερώθηκε με:")
-    print(f"   → {today_date.strftime('%A %d/%m/%Y')} (σήμερα)")
-    print(f"   → {tomorrow_date.strftime('%A %d/%m/%Y')} (αύριο)")
+    print(f"✅ Ενημερώθηκε με:")
+    print(f"   → {today_date.strftime('%A %d/%m')} (σήμερα)")
+    print(f"   → {tomorrow_date.strftime('%A %d/%m')} (αύριο)")
 
 def main():
-    # Σήμερα = η μέρα που τρέχει το script (00:02)
     now = datetime.now()
     today_date = now.replace(hour=0, minute=0, second=0, microsecond=0)
     tomorrow_date = today_date + timedelta(days=1)
 
-    print(f"🔄 Λήψη προγράμματος Alpha Cyprus...")
-
     programmes = fetch_programmes()
-
     if programmes:
         build_xml(programmes, today_date, tomorrow_date)
     else:
