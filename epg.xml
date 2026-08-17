@@ -3,148 +3,142 @@
 <channel id="alpha.cy">
   <display-name>Alpha Cyprus</display-name>
 </channel>
-<programme channel="alpha.cy" start="20260816060000 +0300" stop="20260816071000 +0300">
-  <title>60' ΕΛΛΑΔΑ</title>
+<programme channel="alpha.cy" start="20260817060000 +0300" stop="20260817092000 +0300">
+  <title>ΚΟΙΝΩΝΙΑ ΩΡΑ MEGA</title>
 </programme>
-<programme channel="alpha.cy" start="20260816071000 +0300" stop="20260816084500 +0300">
-  <title>ΕΠΤΑ ΘΑΝΑΣΙΜΕΣ ΠΕΘΕΡΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816084500 +0300" stop="20260816094000 +0300">
-  <title>KITCHEN LAB</title>
-</programme>
-<programme channel="alpha.cy" start="20260816094000 +0300" stop="20260816104500 +0300">
-  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816104500 +0300" stop="20260816113000 +0300">
-  <title>ΜΠΑΜΠΑ Σ'ΑΓΑΠΩ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816113000 +0300" stop="20260816122000 +0300">
-  <title>ΜΗΝ ΑΡΧΙΖΕΙΣ ΤΗ ΜΟΥΡΜΟΥΡΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816122000 +0300" stop="20260816131500 +0300">
-  <title>ΤΟ ΣΟΪ ΣΟΥ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816131500 +0300" stop="20260816143000 +0300">
-  <title>Η ΦΑΜΙΛΙΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816143000 +0300" stop="20260816153000 +0300">
-  <title>THE CHASE GREECE</title>
-</programme>
-<programme channel="alpha.cy" start="20260816153000 +0300" stop="20260816163000 +0300">
-  <title>AKIS' FOOD TOUR</title>
-</programme>
-<programme channel="alpha.cy" start="20260816163000 +0300" stop="20260816173000 +0300">
-  <title>ΣΤΟ ΠΑΡΑ ΠΕΝΤΕ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816173000 +0300" stop="20260816180500 +0300">
+<programme channel="alpha.cy" start="20260817092000 +0300" stop="20260817100000 +0300">
   <title>ΕΧΩ ΠΑΙΔΙΑ</title>
 </programme>
-<programme channel="alpha.cy" start="20260816180500 +0300" stop="20260816181000 +0300">
-  <title>ALPHA NEWS</title>
-</programme>
-<programme channel="alpha.cy" start="20260816181000 +0300" stop="20260816190000 +0300">
-  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816190000 +0300" stop="20260816200000 +0300">
-  <title>ΜΠΑΜΠΑ Σ'ΑΓΑΠΩ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816200000 +0300" stop="20260816210000 +0300">
-  <title>ALPHA NEWS</title>
-</programme>
-<programme channel="alpha.cy" start="20260816210000 +0300" stop="20260816231000 +0300">
-  <title>Η ΓΗ ΤΗΣ ΕΛΙΑΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260816231000 +0300" stop="20260817000000 +0300">
-  <title>MCP WARRIOR</title>
-</programme>
-<programme channel="alpha.cy" start="20260817000000 +0300" stop="20260817010000 +0300">
-  <title>FAMAGUSTA</title>
-</programme>
-<programme channel="alpha.cy" start="20260817010000 +0300" stop="20260817020000 +0300">
-  <title>Η ΚΑΤΑΡΑ ΤΗΣ ΤΖΕΛΑΣ ΔΕΛΑΦΡΑΓΚΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817020000 +0300" stop="20260817030000 +0300">
-  <title>ΟΙ ΙΣΤΟΡΙΕΣ ΤΟΥ ΑΣΤΥΝΟΜΟΥ ΜΠΕΚΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817030000 +0300" stop="20260817034500 +0300">
-  <title>ΕΝΤΙΜΟΤΑΤΟΙ ΚΕΡΑΤΑΔΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817034500 +0300" stop="20260817043000 +0300">
-  <title>Ο ΣΚΑΡΑΒΑΙΟΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817043000 +0300" stop="20260817053000 +0300">
-  <title>ΜΑΙΡΗ, ΜΑΙΡΗ, ΜΑΙΡΗ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817060000 +0300" stop="20260817071000 +0300">
-  <title>60' ΕΛΛΑΔΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817071000 +0300" stop="20260817084500 +0300">
-  <title>ΕΠΤΑ ΘΑΝΑΣΙΜΕΣ ΠΕΘΕΡΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817084500 +0300" stop="20260817094000 +0300">
-  <title>KITCHEN LAB</title>
-</programme>
-<programme channel="alpha.cy" start="20260817094000 +0300" stop="20260817104500 +0300">
-  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817104500 +0300" stop="20260817113000 +0300">
-  <title>ΜΠΑΜΠΑ Σ'ΑΓΑΠΩ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817113000 +0300" stop="20260817122000 +0300">
-  <title>ΜΗΝ ΑΡΧΙΖΕΙΣ ΤΗ ΜΟΥΡΜΟΥΡΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817122000 +0300" stop="20260817131500 +0300">
-  <title>ΤΟ ΣΟΪ ΣΟΥ</title>
-</programme>
-<programme channel="alpha.cy" start="20260817131500 +0300" stop="20260817143000 +0300">
+<programme channel="alpha.cy" start="20260817100000 +0300" stop="20260817104500 +0300">
   <title>Η ΦΑΜΙΛΙΑ</title>
 </programme>
-<programme channel="alpha.cy" start="20260817143000 +0300" stop="20260817153000 +0300">
-  <title>THE CHASE GREECE</title>
+<programme channel="alpha.cy" start="20260817104500 +0300" stop="20260817120000 +0300">
+  <title>ΜΗΝ ΑΡΧΙΖΕΙΣ ΤΗ ΜΟΥΡΜΟΥΡΑ</title>
 </programme>
-<programme channel="alpha.cy" start="20260817153000 +0300" stop="20260817163000 +0300">
-  <title>AKIS' FOOD TOUR</title>
+<programme channel="alpha.cy" start="20260817120000 +0300" stop="20260817130000 +0300">
+  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
 </programme>
-<programme channel="alpha.cy" start="20260817163000 +0300" stop="20260817173000 +0300">
+<programme channel="alpha.cy" start="20260817130000 +0300" stop="20260817143000 +0300">
+  <title>ALPHA ΚΑΛΟΚΑΙΡΙ</title>
+</programme>
+<programme channel="alpha.cy" start="20260817143000 +0300" stop="20260817151500 +0300">
+  <title>ΤΟ ΣΟΪ ΣΟΥ</title>
+</programme>
+<programme channel="alpha.cy" start="20260817151500 +0300" stop="20260817161000 +0300">
+  <title>KITCHEN LAB</title>
+</programme>
+<programme channel="alpha.cy" start="20260817161000 +0300" stop="20260817170000 +0300">
   <title>ΣΤΟ ΠΑΡΑ ΠΕΝΤΕ</title>
 </programme>
-<programme channel="alpha.cy" start="20260817173000 +0300" stop="20260817180500 +0300">
-  <title>ΕΧΩ ΠΑΙΔΙΑ</title>
+<programme channel="alpha.cy" start="20260817170000 +0300" stop="20260817175500 +0300">
+  <title>THE CHASE GREECE</title>
 </programme>
-<programme channel="alpha.cy" start="20260817180500 +0300" stop="20260817181000 +0300">
+<programme channel="alpha.cy" start="20260817175500 +0300" stop="20260817180000 +0300">
   <title>ALPHA NEWS</title>
 </programme>
-<programme channel="alpha.cy" start="20260817181000 +0300" stop="20260817190000 +0300">
+<programme channel="alpha.cy" start="20260817180000 +0300" stop="20260817190000 +0300">
   <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
 </programme>
 <programme channel="alpha.cy" start="20260817190000 +0300" stop="20260817200000 +0300">
-  <title>ΜΠΑΜΠΑ Σ'ΑΓΑΠΩ</title>
+  <title>DEAL</title>
 </programme>
 <programme channel="alpha.cy" start="20260817200000 +0300" stop="20260817210000 +0300">
   <title>ALPHA NEWS</title>
 </programme>
-<programme channel="alpha.cy" start="20260817210000 +0300" stop="20260817231000 +0300">
+<programme channel="alpha.cy" start="20260817210000 +0300" stop="20260817222000 +0300">
+  <title>ΜΙΑ ΝΥΧΤΑ ΜΟΝΟ</title>
+</programme>
+<programme channel="alpha.cy" start="20260817222000 +0300" stop="20260817234500 +0300">
   <title>Η ΓΗ ΤΗΣ ΕΛΙΑΣ</title>
 </programme>
-<programme channel="alpha.cy" start="20260817231000 +0300" stop="20260818000000 +0300">
-  <title>MCP WARRIOR</title>
+<programme channel="alpha.cy" start="20260817234500 +0300" stop="20260818003000 +0300">
+  <title>ΕΙΣΑΙ ΤΟ ΤΑΙΡΙ ΜΟΥ</title>
 </programme>
-<programme channel="alpha.cy" start="20260818000000 +0300" stop="20260818010000 +0300">
-  <title>FAMAGUSTA</title>
+<programme channel="alpha.cy" start="20260818003000 +0300" stop="20260818013000 +0300">
+  <title>Ο ΤΙΜΩΡΟΣ</title>
 </programme>
-<programme channel="alpha.cy" start="20260818010000 +0300" stop="20260818020000 +0300">
-  <title>Η ΚΑΤΑΡΑ ΤΗΣ ΤΖΕΛΑΣ ΔΕΛΑΦΡΑΓΚΑ</title>
+<programme channel="alpha.cy" start="20260818013000 +0300" stop="20260818023000 +0300">
+  <title>ΜΑΥΡΟ ΡΟΔΟ</title>
 </programme>
-<programme channel="alpha.cy" start="20260818020000 +0300" stop="20260818030000 +0300">
-  <title>ΟΙ ΙΣΤΟΡΙΕΣ ΤΟΥ ΑΣΤΥΝΟΜΟΥ ΜΠΕΚΑ</title>
+<programme channel="alpha.cy" start="20260818023000 +0300" stop="20260818033000 +0300">
+  <title>ΣΑΒΒΑΤΟΓΕΝΝΗΜΕΝΕΣ</title>
 </programme>
-<programme channel="alpha.cy" start="20260818030000 +0300" stop="20260818034500 +0300">
-  <title>ΕΝΤΙΜΟΤΑΤΟΙ ΚΕΡΑΤΑΔΕΣ</title>
+<programme channel="alpha.cy" start="20260818033000 +0300" stop="20260818041500 +0300">
+  <title>SINGLES</title>
 </programme>
-<programme channel="alpha.cy" start="20260818034500 +0300" stop="20260818043000 +0300">
-  <title>Ο ΣΚΑΡΑΒΑΙΟΣ</title>
+<programme channel="alpha.cy" start="20260818041500 +0300" stop="20260818050000 +0300">
+  <title>ΚΟΚΚΙΝΟ ΔΩΜΑΤΙΟ</title>
 </programme>
-<programme channel="alpha.cy" start="20260818043000 +0300" stop="20260818053000 +0300">
-  <title>ΜΑΙΡΗ, ΜΑΙΡΗ, ΜΑΙΡΗ</title>
+<programme channel="alpha.cy" start="20260817050000 +0300" stop="20260817060000 +0300">
+  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818060000 +0300" stop="20260818092000 +0300">
+  <title>ΚΟΙΝΩΝΙΑ ΩΡΑ MEGA</title>
+</programme>
+<programme channel="alpha.cy" start="20260818092000 +0300" stop="20260818100000 +0300">
+  <title>ΕΧΩ ΠΑΙΔΙΑ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818100000 +0300" stop="20260818104500 +0300">
+  <title>Η ΦΑΜΙΛΙΑ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818104500 +0300" stop="20260818120000 +0300">
+  <title>ΜΗΝ ΑΡΧΙΖΕΙΣ ΤΗ ΜΟΥΡΜΟΥΡΑ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818120000 +0300" stop="20260818130000 +0300">
+  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818130000 +0300" stop="20260818143000 +0300">
+  <title>ALPHA ΚΑΛΟΚΑΙΡΙ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818143000 +0300" stop="20260818151500 +0300">
+  <title>ΤΟ ΣΟΪ ΣΟΥ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818151500 +0300" stop="20260818161000 +0300">
+  <title>KITCHEN LAB</title>
+</programme>
+<programme channel="alpha.cy" start="20260818161000 +0300" stop="20260818170000 +0300">
+  <title>ΣΤΟ ΠΑΡΑ ΠΕΝΤΕ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818170000 +0300" stop="20260818175500 +0300">
+  <title>THE CHASE GREECE</title>
+</programme>
+<programme channel="alpha.cy" start="20260818175500 +0300" stop="20260818180000 +0300">
+  <title>ALPHA NEWS</title>
+</programme>
+<programme channel="alpha.cy" start="20260818180000 +0300" stop="20260818190000 +0300">
+  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818190000 +0300" stop="20260818200000 +0300">
+  <title>DEAL</title>
+</programme>
+<programme channel="alpha.cy" start="20260818200000 +0300" stop="20260818210000 +0300">
+  <title>ALPHA NEWS</title>
+</programme>
+<programme channel="alpha.cy" start="20260818210000 +0300" stop="20260818222000 +0300">
+  <title>ΜΙΑ ΝΥΧΤΑ ΜΟΝΟ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818222000 +0300" stop="20260818234500 +0300">
+  <title>Η ΓΗ ΤΗΣ ΕΛΙΑΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818234500 +0300" stop="20260819003000 +0300">
+  <title>ΕΙΣΑΙ ΤΟ ΤΑΙΡΙ ΜΟΥ</title>
+</programme>
+<programme channel="alpha.cy" start="20260819003000 +0300" stop="20260819013000 +0300">
+  <title>Ο ΤΙΜΩΡΟΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260819013000 +0300" stop="20260819023000 +0300">
+  <title>ΜΑΥΡΟ ΡΟΔΟ</title>
+</programme>
+<programme channel="alpha.cy" start="20260819023000 +0300" stop="20260819033000 +0300">
+  <title>ΣΑΒΒΑΤΟΓΕΝΝΗΜΕΝΕΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260819033000 +0300" stop="20260819041500 +0300">
+  <title>SINGLES</title>
+</programme>
+<programme channel="alpha.cy" start="20260819041500 +0300" stop="20260819050000 +0300">
+  <title>ΚΟΚΚΙΝΟ ΔΩΜΑΤΙΟ</title>
+</programme>
+<programme channel="alpha.cy" start="20260818050000 +0300" stop="20260818060000 +0300">
+  <title>ΟΙΚΟΓΕΝΕΙΑΚΕΣ ΙΣΤΟΡΙΕΣ</title>
 </programme>
 </tv>
