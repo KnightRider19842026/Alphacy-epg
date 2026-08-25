@@ -3,45 +3,6 @@
 <channel id="alpha.cy">
   <display-name>Alpha Cyprus</display-name>
 </channel>
-<programme channel="alpha.cy" start="20260824060000 +0300" stop="20260824092000 +0300">
-  <title>ΚΟΙΝΩΝΙΑ ΩΡΑ MEGA</title>
-</programme>
-<programme channel="alpha.cy" start="20260824092000 +0300" stop="20260824130000 +0300">
-  <title>ΕΧΩ ΠΑΙΔΙΑ</title>
-</programme>
-<programme channel="alpha.cy" start="20260824130000 +0300" stop="20260824161000 +0300">
-  <title>ALPHA ΚΑΛΟΚΑΙΡΙ</title>
-</programme>
-<programme channel="alpha.cy" start="20260824161000 +0300" stop="20260824170000 +0300">
-  <title>ΣΤΟ ΠΑΡΑ ΠΕΝΤΕ</title>
-</programme>
-<programme channel="alpha.cy" start="20260824170000 +0300" stop="20260824210000 +0300">
-  <title>THE CHASE GREECE</title>
-</programme>
-<programme channel="alpha.cy" start="20260824210000 +0300" stop="20260824222000 +0300">
-  <title>ΜΙΑ ΝΥΧΤΑ ΜΟΝΟ</title>
-</programme>
-<programme channel="alpha.cy" start="20260824222000 +0300" stop="20260824234500 +0300">
-  <title>Η ΓΗ ΤΗΣ ΕΛΙΑΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260824234500 +0300" stop="20260825003000 +0300">
-  <title>ΔΥΟ ΞΕΝΟΙ</title>
-</programme>
-<programme channel="alpha.cy" start="20260825003000 +0300" stop="20260825013000 +0300">
-  <title>Ο ΤΙΜΩΡΟΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260825013000 +0300" stop="20260825023000 +0300">
-  <title>ΜΑΥΡΟ ΡΟΔΟ</title>
-</programme>
-<programme channel="alpha.cy" start="20260825023000 +0300" stop="20260825033000 +0300">
-  <title>ΣΑΒΒΑΤΟΓΕΝΝΗΜΕΝΕΣ</title>
-</programme>
-<programme channel="alpha.cy" start="20260825033000 +0300" stop="20260825041500 +0300">
-  <title>SINGLES</title>
-</programme>
-<programme channel="alpha.cy" start="20260825041500 +0300" stop="20260825051500 +0300">
-  <title>ΚΟΚΚΙΝΟ ΔΩΜΑΤΙΟ</title>
-</programme>
 <programme channel="alpha.cy" start="20260825060000 +0300" stop="20260825092000 +0300">
   <title>ΚΟΙΝΩΝΙΑ ΩΡΑ MEGA</title>
 </programme>
@@ -79,6 +40,45 @@
   <title>SINGLES</title>
 </programme>
 <programme channel="alpha.cy" start="20260826041500 +0300" stop="20260826051500 +0300">
+  <title>ΚΟΚΚΙΝΟ ΔΩΜΑΤΙΟ</title>
+</programme>
+<programme channel="alpha.cy" start="20260826060000 +0300" stop="20260826092000 +0300">
+  <title>ΚΟΙΝΩΝΙΑ ΩΡΑ MEGA</title>
+</programme>
+<programme channel="alpha.cy" start="20260826092000 +0300" stop="20260826130000 +0300">
+  <title>ΕΧΩ ΠΑΙΔΙΑ</title>
+</programme>
+<programme channel="alpha.cy" start="20260826130000 +0300" stop="20260826161000 +0300">
+  <title>ALPHA ΚΑΛΟΚΑΙΡΙ</title>
+</programme>
+<programme channel="alpha.cy" start="20260826161000 +0300" stop="20260826170000 +0300">
+  <title>ΣΤΟ ΠΑΡΑ ΠΕΝΤΕ</title>
+</programme>
+<programme channel="alpha.cy" start="20260826170000 +0300" stop="20260826210000 +0300">
+  <title>THE CHASE GREECE</title>
+</programme>
+<programme channel="alpha.cy" start="20260826210000 +0300" stop="20260826222000 +0300">
+  <title>ΜΙΑ ΝΥΧΤΑ ΜΟΝΟ</title>
+</programme>
+<programme channel="alpha.cy" start="20260826222000 +0300" stop="20260826234500 +0300">
+  <title>Η ΓΗ ΤΗΣ ΕΛΙΑΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260826234500 +0300" stop="20260827003000 +0300">
+  <title>ΔΥΟ ΞΕΝΟΙ</title>
+</programme>
+<programme channel="alpha.cy" start="20260827003000 +0300" stop="20260827013000 +0300">
+  <title>Ο ΤΙΜΩΡΟΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260827013000 +0300" stop="20260827023000 +0300">
+  <title>ΜΑΥΡΟ ΡΟΔΟ</title>
+</programme>
+<programme channel="alpha.cy" start="20260827023000 +0300" stop="20260827033000 +0300">
+  <title>ΣΑΒΒΑΤΟΓΕΝΝΗΜΕΝΕΣ</title>
+</programme>
+<programme channel="alpha.cy" start="20260827033000 +0300" stop="20260827041500 +0300">
+  <title>SINGLES</title>
+</programme>
+<programme channel="alpha.cy" start="20260827041500 +0300" stop="20260827051500 +0300">
   <title>ΚΟΚΚΙΝΟ ΔΩΜΑΤΙΟ</title>
 </programme>
 </tv>
